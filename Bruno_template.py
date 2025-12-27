@@ -940,7 +940,7 @@ def matvec_triu_prod3(U, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == L, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(U, np.triu(U)), "U must be upper triangular" 
+        assert np.allclose(U, np.triu(U)), "U must be upper triangular" 
     result = np.zeros(L)
 
     for i in range(0, N):
@@ -986,7 +986,7 @@ def matvec_triu_prod5(U, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == L, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(U, np.triu(U)), "U must be upper triangular" 
+        assert np.allclose(U, np.triu(U)), "U must be upper triangular" 
     result = np.zeros_like(x)
     # obs, ao usar :j é preciso somar 1 para acessar o ultimo elemnto
     #   pois o laço é de N-1, e indexado no inicio em 0
@@ -1033,7 +1033,7 @@ def matvec_tril_prod8(L, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == P, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(L, np.tril(L)), "L must be lower triangular" 
+        assert np.allclose(L, np.tril(L)), "L must be lower triangular" 
     result = np.zeros(P)
     # obs, ao usar :j é preciso somar 1 para acessar o ultimo elemnto
     #   pois o laço é de N-1, e indexado no inicio em 0
@@ -1079,7 +1079,7 @@ def matvec_tril_prod10(L, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == P, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(L, np.tril(L)), "L must be lower triangular" 
+        assert np.allclose(L, np.tril(L)), "L must be lower triangular" 
     
     result = np.zeros(P)
     # create your code here
@@ -1122,7 +1122,7 @@ def triu_system(A, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == n, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(A, np.triu(A)), "U must be upper triangular" 
+        assert np.allclose(A, np.triu(A)), "U must be upper triangular" 
 
     # create your code here
 
@@ -1169,7 +1169,7 @@ def tril_system(A, x, check_input=True):
         assert isinstance(x, np.ndarray) and x.ndim == 1, "x must be a 1D numpy array"
         assert M == n, "Matrix and vector dimensions must match"
         # Verify U is actually upper triangular
-        #assert np.allclose(A, np.tril(A)), "L must be lower triangular" 
+        assert np.allclose(A, np.tril(A)), "L must be lower triangular" 
 
     # create your code here
     result = np.zeros(n)
