@@ -1,7 +1,7 @@
 import numpy as np
 from numpy.testing import assert_almost_equal as aae
 import pytest
-import Bruno_template as tmp
+import functions_mat as tmp
 
 # Scalar-vector test
 def test_scalar_vec_real_a_not_scalar():
